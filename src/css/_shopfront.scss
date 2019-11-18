@@ -1,0 +1,145 @@
+  /*  Blocks  */
+  .categoryBackground {
+    background-color: $color-black;
+  }
+
+  .categoryBackground__categoryContainer {
+    margin: 0 200px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  /*  Elements    */
+
+  .categoryContainer__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    height: 200px;
+    width: 280px;
+  }
+
+  .link__overlay {
+    height: 200px;
+    width: 280px;
+    background-color: $theme-color-faded;
+    z-index: 40;
+    position: absolute;
+  }
+
+  .link__text {
+    z-index: 50;
+    text-align: center;
+  }
+
+  .link__text_shopNow {
+    padding: 20px;
+    background-color: $theme-color;
+  }
+
+  .category1 {
+    background: url(/assets/images/shopfront/shop-13.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category2 {
+    background: url(/assets/images/shopfront/shop-6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category3 {
+    background: url(/assets/images/shopfront/shop-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category4 {
+    background: url(/assets/images/shopfront/shop-5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category5 {
+    background: url(/assets/images/shopfront/shop-8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category6 {
+    background: url(/assets/images/shopfront/shop-7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category7 {
+    background: url(/assets/images/shopfront/shop-9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category8 {
+    background: url(/assets/images/shopfront/shop-13.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category9 {
+    background: url(/assets/images/shopfront/shop-14.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category10 {
+    background: url(/assets/images/shopfront/shop-11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category11 {
+    background: url(/assets/images/shopfront/shop-15.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category12 {
+    background: url(/assets/images/shopfront/shop-19.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category13 {
+    background: url(/assets/images/shopfront/shop-16.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category14 {
+    background: url(/assets/images/shopfront/shop-17.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .category15 {
+    background: url(/assets/images/shopfront/shop-18.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }

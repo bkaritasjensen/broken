@@ -1,6 +1,69 @@
-<% include ../partials/head %>
-<main class="main">
-    <p class="test">hello World!</p>
+<% include ../partials/head %> <% include ../partials/header %>
+<main class="main__container">
+  <figure class="container__figure">
+    <img src="/assets/images/background/logo-white.png" alt="" class="container__img" />
+  </figure>
+  <section class="container__sectionText"></section>
+  <section class="container__sectionGallery">
+    <h2 class="sectionGallery__h2">
+      PRIMALUNA <br />
+      SOUNDS
+    </h2>
+    <div class="sectionGallery__arrowContainer">
+      <ion-icon
+        class="arrowContainer__arrowBack"
+        name="ios-arrow-back"
+      ></ion-icon>
+      <ion-icon
+        class="arrowContainer__arrowForward"
+        name="ios-arrow-forward"
+      ></ion-icon>
+    </div>
+  </section>
+  <div class="container__someContainer">
+    <figure class="someContainer__figure someContainer__figure_facebook">
+      <img
+        src="/assets/images/background/social-facebook.png"
+        alt=""
+        class="figure__img"
+      />
+    </figure>
+    <figure class="someContainer__figure someContainer__figure_blogger">
+      <img src="/assets/images/background/social-blog.png" alt="" class="figure__img" />
+    </figure>
+    <figure class="someContainer__figure someContainer__figure_twitter">
+      <img
+        src="/assets/images/background/social-twitter.png"
+        alt=""
+        class="figure__img"
+      />
+    </figure>
+  </div>
+  <section class="container__linkContainer">
+    <div class="linkContainer__flexContainer">
+      <div class="flexContainer__linkContent">
+        <button class="linkContent__link">HISTORY</button>
+        <p class="linkContent__text">
+          Established in the late 1960s, our <br />family owned business is
+          based in <br />Edinburgh and Falkirk, servicing <br />customers across
+          the UK
+        </p>
+      </div>
+      <div class="flexContainer__linkContent">
+        <button class="linkContent__link">NEWS</button>
+        <p class="linkContent__text">
+          Check out our latest news <br />stories for all the up to date hi-<br />fi
+          corner products and <br />launches.
+        </p>
+      </div>
+      <div class="flexContainer__linkContent">
+        <button class="linkContent__link">SHOP</button>
+        <p class="linkContent__text">
+          Have a look in our online shop <br />for great products and deals
+        </p>
+      </div>
+    </div>
+  </section>
 </main>
-<% include ../partials/nav %>
+<% include ../partials/footer %> 
 <% include ../partials/after-footer %>

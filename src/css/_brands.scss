@@ -1,0 +1,59 @@
+@import "variables";
+
+.brands__background {
+  background-color: #000;
+}
+
+.background__logoContainer {
+  background: url(/assets/images/brands/banner-speaker.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 115px 115px 115px;
+}
+
+.background__brandsContainer {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.76);
+  border: 15px solid $color-white;
+  margin: 30px 100px 0 100px;
+}
+
+.brandsContainer__brandLogoContainer {
+  width: 50%;
+  padding: 20px;
+  background-image: linear-gradient(to right, #060606, #292929);
+}
+
+.brandsContainer__textContainer {
+  width: 50%;
+  padding: 20px;
+  background: url(/assets/images/brands/brands-bg-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*  Elements    */
+.logoContainer__header {
+  color: $color-white;
+}
+
+.brandLogoContainer__text {
+  color: $theme-color;
+  margin-bottom: 20px;
+}
+
+.textContainer__h1 {
+  color: $theme-color;
+}
+
+.textContainer__p {
+  color: $color-white;
+}
+
+.textContainer__link {
+  color: $theme-color;
+}

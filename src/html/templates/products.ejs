@@ -1,0 +1,61 @@
+<% include ../partials/head %> 
+<% include ../partials/header %>
+<div class="categoryPath">
+  <a href="/products/index.html" class="categoryPath__home">Home</a>
+  <i class="categoryPath__space">/</i>
+  <p class="categoryPath__second">Amplifiers</p>
+</div>
+<div class="productsBackground">
+  <ul class="productsBackground__categories"></ul>
+  <div class="productsBackground__filter">
+    <h3 class="filter__header">Shop By</h3>
+    <h5 class="filter__filter">Filter</h5>
+    <h5 class="filter__category">Price</h5>
+    <ul class="category__priceContainer">
+      <a class="priceContainer__price" href="#">£0.00 - £799.99 (10)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£800.00 - £999.99 (11)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£1.000.00 - £1.499.99 (13)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£1,500.00 - £1,999.99 (13)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£2.000 00 - £2.999.99 (20)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£3.000.00 - £3.499 99 (11)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£3,500.00 - £4,999.99 (17)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£5,000.00 - £7.999.99 (16)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£8,000 00 - £11.999.99 (9)</a>
+      <br />
+      <a class="priceContainer__price" href="#">£12.000.00 and above (13)</a>
+    </ul>
+    <h5 class="filter__category">Manufacturer</h5>
+    <ul class="filter__manufacturersContainer"></ul>
+  </div>
+  <div class="productsBackground__manufacturers">
+    <h3 class="manufacturers__header">Manufacturer</h3>
+    <ul class="manufacturers__titles"></ul>
+    <h5 class="manufacturers__collapse">View All</h5>
+  </div>
+  <main class="productsBackground__productsContainer">
+    <h2 class="productsContainer__header">Amplifiers</h2>
+    <div class="productsContainer__sortingContainer">
+      <h5 class="sortingContainer__sortBy">SORT BY:</h5>
+      <div class="sortingContainer__sortByBtnContainer">
+        <button class="btnContainer__btn">Price</button>
+      </div>
+      <div class="sortingContainer__showBtnContainer">
+        <p class="showBtnContainer__items">36 item(s)</p>
+        <p class="showBtnContainer__show">SHOW:</p>
+        <button class="btnContainer__btn">300</button>
+      </div>
+      <!-- <p class="sortingContainer__view">VIEW AS:</p> -->
+    </div>
+    <div class="productsContainer__productContainer"></div>
+  </main>
+</div>
+<% include ../partials/footer %> 
+<% include ../partials/after-footer %>

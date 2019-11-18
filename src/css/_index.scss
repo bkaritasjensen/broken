@@ -1,0 +1,168 @@
+@import "variables";
+
+/* @media screen and (min-width: 1280px) { */
+    
+
+    .main__container{
+        margin: 0;
+    }
+    /*  Blocks  */
+
+    .container__figure{
+        background: url(/assets/images/frontpage/new-home-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container__sectionText{
+        background: url(/assets/images/frontpage/moved.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        border-top: 1px solid $item-color;
+    }
+
+    .container__sectionGallery{
+        background: url(/assets/images/frontpage/slide-3.jpg);
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .sectionGallery__arrowContainer{
+        display: flex;
+        justify-content: space-between;
+        padding: 125px 40px;
+    }
+
+    .container__someContainer{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container__linkContainer{
+        background-color: $color-black;
+        padding: 125px;
+    }
+
+    .linkContainer__flexContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .flexContainer__linkContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /*  Elements    */
+    .sectionText__innerText{
+        color: $color-white;
+        font-size: 50px;
+        font-weight: 300;
+    }
+
+    .someContainer__figure{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sectionGallery__h2{
+        color: $item-color;
+        font-weight: 300;
+        padding: 45px;
+    }
+    
+    .arrowContainer__arrowBack{
+        height: 50px;
+        width: 50px;
+        color: $item-color; 
+    }
+    
+    .arrowContainer__arrowForward{
+        height: 50px;
+        width: 50px;
+        color: $item-color;
+    }
+
+    .linkContent__link{
+        background: transparent;
+        border: 1px solid $color-white;
+        color: $item-color;
+        width: 154px;
+        height: 45px;
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .linkContent__link:hover{
+        color: $item-color-hover;
+        cursor: pointer;
+    }
+
+    .linkContent__text{
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-white;
+    }
+
+    .someContainer__figure_facebook{
+        background: url(/assets/images/frontpage/social-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: all 500ms;
+        height: 499px;
+    }
+
+    .someContainer__figure_facebook:hover{
+        box-shadow: inset 0 0 450px $color-black;
+        cursor: pointer;
+    }
+    
+    .someContainer__figure_blogger{
+        background: url(/assets/images/frontpage/social-2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: all 500ms;
+        height: 499px;
+    }
+
+    .someContainer__figure_blogger:hover{
+        box-shadow: inset 0 0 450px $color-black;
+        cursor: pointer;
+    }
+
+    .someContainer__figure_twitter{
+        background: url(/assets/images/frontpage/social-3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: all 500ms;
+        height: 499px;
+    }
+
+    .someContainer__figure_twitter:hover{
+        box-shadow: inset 0 0 450px $color-black;
+        cursor: pointer;
+    }
+/* } */

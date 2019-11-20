@@ -48,7 +48,7 @@
         <button class="btnContainer__btn">Price</button>
       </div>
       <div class="sortingContainer__showBtnContainer">
-        <p class="showBtnContainer__items">36 item(s)</p>
+        <p class="showBtnContainer__items"> item(s)</p>
         <p class="showBtnContainer__show">SHOW:</p>
         <button class="btnContainer__btn">300</button>
       </div>
@@ -59,3 +59,16 @@
 </div>
 <% include ../partials/footer %> 
 <% include ../partials/after-footer %>
+
+<template class="productsTemplate">
+    <a href="" class="product__link">
+      <section class="productContainer__product">
+        <img src="" alt="Billede" class="product__img">
+        <h4 class="product__header"></h4>
+        <h5 class="product__price"></h5>
+        <button class="product__buyBtn">ADD TO CART</button>
+      </section>
+    </a>
+</template>
+
+<!-- ../Product/product.html?product_id=${product.id} -->

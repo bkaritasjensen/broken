@@ -23,19 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
             `
             mainElement.innerHTML = `
             <img
-            src="../../Img/Produktbilleder/${data.images[0]}"
+            src="${data.images[0]}"
             alt=""
             class="productContainer__img"
           />
           <p class="productContainer__imgText">MORE VIEWS</p>
           <figure class="productContainer__moreImgContainer">
             <img
-              src="../../Img/Produktbilleder/${data.images[0]}"
+              src="${data.images[0]}"
               alt=""
               class="moreImgContainer__img"
             />
             <img
-              src="../../Img/Produktbilleder/${data.images[0]}"
+              src="${data.images[0]}"
               alt=""
               class="moreImgContainer__img"
             />
@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4 class="productContainer__bottomDescriptionHeader">DESCRIPTION</h4>
           <p class="productContainer__bottomDescriptionText">${data.description}</p>
           <section class="productContainer__descriptionContainer">
-            <h3 class="descriptionContainer__header">${product.producer} ${product.name}</h3>
+            <h3 class="descriptionContainer__header">${data.make} ${data.model}</h3>
             <div class="descriptionContainer__linkPriceContainer">
               <a href="" class="linkPriceContainer__link"
-                >See other ${product.producer} products</a
+                >See other ${data.make} products</a
               >
-              <h3 class="linkPriceContainer__price">${product.price}</h3>
+              <h3 class="linkPriceContainer__price">${data.price}</h3>
             </div>
             <p class="descriptionContainer__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, non.
@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="contentContainer__infoKey">Delivery charge</p>
               <p class="contentContainer__infoKey">Delivery time</p>
               <p class="contentContainer__infoKey">Card surcharges</p>
-              <p class="contentContainer__infoValue grid1">${product.producer}</p>
-              <p class="contentContainer__infoValue grid2">${product.name}</p>
+              <p class="contentContainer__infoValue grid1">${data.make}</p>
+              <p class="contentContainer__infoValue grid2">${data.model}</p>
               <p class="contentContainer__infoValue grid3">3 years</p>
               <p class="contentContainer__infoValue grid4">Free</p>
               <p class="contentContainer__infoValue grid5">1 - 5 Working Days</p>

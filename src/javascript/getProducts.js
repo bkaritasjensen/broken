@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const product = data.filter(function(e) {
           return e.category === productCategory;
         });
+        
         // Create each product
         product.forEach(function(product) {
           const clone = productsTemplate.content.cloneNode(true);
@@ -41,9 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         //  Count products
-        let countProducts = data.length;
+        let countProducts = product.length;
         productCountContainer.innerText = `${countProducts} item(s)`;
       } else {
+        //  Count products
+        let countProducts = data.length;
+        productCountContainer.innerText = `${countProducts} item(s)`;
+
         data.forEach(function(product) {
           const clone = productsTemplate.content.cloneNode(true);
           clone.querySelector(

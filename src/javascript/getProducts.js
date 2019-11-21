@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://hifi-corner.herokuapp.com/api/v1/products")
     .then(response => response.json())
     .then(function(data) {
+      console.log(data)
       if (productCategory) {
         const product = data.filter(function(e) {
           return e.category === productCategory;
         });
-
         // Create each product
         product.forEach(function(product) {
           const clone = productsTemplate.content.cloneNode(true);
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
           list.appendChild(clone);
         });
       }
+
       // Current Category
       categoryElement.innerHTML = productCategory;
       categoryHeader.innerHTML = productCategory;
@@ -78,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
       data.forEach(product => {
         return manufacturerArr.push(product.make);
       });
-      console.log(manufacturerArr);
       getUnique(manufacturerArr).forEach(item => {
         manufacturer.innerHTML += `<li class="manufacturersContainer__container"><a href="" class="manufacturersContainer__manufacturer">${item}</a></li>`;
         titleManufacturer.innerHTML += `<li class="title__manufacturer"><a href="" class="manufacturer__link ${item}">${item}</a></li>`;

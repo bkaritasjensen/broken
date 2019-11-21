@@ -53,7 +53,7 @@ function watchJavascript() {
 	gulp.watch("./src/javascript/**/*.js", { ignoreInitial: false }, javascript);
 }
 
-function json(done) {
+/* function json(done) {
 	gulp.src("./src/json/*.json")
 		.pipe(gulp.dest("./dist/data"))
 		.pipe(connect.reload());
@@ -62,7 +62,7 @@ function json(done) {
 
 function watchJson() {
 	gulp.watch("./src/json/*.json", { ignoreInitial: false }, json);
-}
+} */
 
 function images(done) {
 	gulp.src("./src/images/**/*")
@@ -80,7 +80,7 @@ gulp.task("dev", function(done) {
 	watchHtml();
 	watchScss();
 	watchJavascript();
-	watchJson();
+	//watchJson();
 	watchImages();
 	connect.server({
 		livereload: true,

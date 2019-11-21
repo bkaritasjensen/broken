@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let params = new URLSearchParams(document.location.search);
-    let productId =  params.get("sku")/* parseInt() */;
+    let productId =  params.get("sku");
     let mainElement = document.querySelector(".productContainer");
     let topElement = document.querySelector('.categoryPath');
     

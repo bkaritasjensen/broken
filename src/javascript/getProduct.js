@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then(function(data) {
-      console.log(data);
 
       //  Category path creation
       const clonePath = categorypathTemplate.content.cloneNode(true);

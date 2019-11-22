@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://hifi-corner.herokuapp.com/api/v1/products")
     .then(response => response.json())
     .then(function(data) {
+
+      // Conditional statement, show all products or specific category.
       if (productCategory) {
         const product = data.filter(function(e) {
           return e.category === productCategory;

@@ -2,9 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //  Search for category, brands & price in URL
   let params = new URLSearchParams(window.location.search);
   let productCategory = params.get("product_category");
-  let productBrand = params.get("product_make");
-  let productPricemin = params.get("product_minPrice");
-  let productPricemax = params.get("product_maxPrice");
 
   //  Category list & container
   const categoryContainer = document.querySelector(".productsBackground__categories");
@@ -49,9 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://hifi-corner.herokuapp.com/api/v1/products")
     .then(response => response.json())
     .then(function(data) {
-      console.log(productBrand)
-      console.log(productPricemin)
-      console.log(productPricemax)
+
       // Conditional statement, show all products or specific category.
       if (productCategory) {
         const product = data.filter(function(e) {

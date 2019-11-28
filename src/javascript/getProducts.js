@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //  Search for category in URL
+  //  Search for category, brands & price in URL
   let params = new URLSearchParams(window.location.search);
   let productCategory = params.get("product_category");
+  let productBrand = params.get("product_make");
+  let productPricemin = params.get("product_minPrice");
+  let productPricemax = params.get("product_maxPrice");
 
   //  Category list & container
   const categoryContainer = document.querySelector(".productsBackground__categories");
@@ -29,19 +32,26 @@ document.addEventListener("DOMContentLoaded", () => {
       clone.querySelector("a").href = `/product/?sku=${product.sku}`;
       list.appendChild(clone);
     });
-  }
+  };
 
   //  Count Products
   function countProducts(e){
     let countProducts = e.length;
     productCountContainer.innerText = `${countProducts} item(s)`;
-  }
+  };
+
+  //  Sorting to only one kind of each item
+  function getUnique(arr) {
+    return arr.filter((e, i) => arr.indexOf(e) >= i)
+  };
 
   //  Fetch data from API
   fetch("https://hifi-corner.herokuapp.com/api/v1/products")
     .then(response => response.json())
     .then(function(data) {
-
+      console.log(productBrand)
+      console.log(productPricemin)
+      console.log(productPricemax)
       // Conditional statement, show all products or specific category.
       if (productCategory) {
         const product = data.filter(function(e) {
@@ -60,9 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       //  Create categories
       const arr = data.map(product => product.category);
-      function getUnique(arr) {
-        return arr.filter((e, i) => arr.indexOf(e) >= i)
-      };
       getUnique(arr).forEach(item => {
         categoryContainer.innerHTML += 
         `<li class="categories__category"><a href="/products/index.html?product_category=${item}" class="category__link ${item}">${item}</a></li>`;

@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
         `<li class="categories__category"><a href="/products/index.html?product_category=${item}" class="category__link ${item}">${item}</a></li>`;
       });
 
-      //  Create Manufacturer list
-      const manufacturerArr = data.map(product => product.make);
-      getUnique(manufacturerArr).forEach(item => {
+      //  Create Brands list
+      const brandsArr = data.map(product => product.make);
+      getUnique(brandsArr).forEach(item => {
         manufacturer.innerHTML += `<li class="manufacturersContainer__container"><a href="/products/index.html?product_make=${item}" class="manufacturersContainer__manufacturer">${item}</a></li>`;
         titleManufacturer.innerHTML += `<li class="title__manufacturer"><a href="/products/index.html?product_make=${item}" class="manufacturer__link ${item}">${item}</a></li>`;
       });

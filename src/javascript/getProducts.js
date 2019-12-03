@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoryContainer = document.querySelector(".productsBackground__categories");
   const productCountContainer = document.querySelector(".showBtnContainer__items");
 
-  //  Path for the category & model
+  //  Path for current category & model
   const categoryElement = document.querySelector(".categoryPath__second");
   const categoryHeader = document.querySelector(".productsContainer__header");
 
-  //  Manufacturer list & container
-  const titleManufacturer = document.querySelector(".manufacturers__titles");
-  const manufacturer = document.querySelector(".filter__manufacturersContainer");
+  //  Brands list & container
+  const titleBrands = document.querySelector(".manufacturers__titles");
+  const brandsContainer = document.querySelector(".filter__manufacturersContainer");
 
   //  Products template & container
   const productsTemplate = document.querySelector(".productsTemplate");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.json())
     .then(function(data) {
 
-      // Conditional statement, show all products or specific category.
+      // Conditional statement, show all products or specific category / brand.
       if (productCategory) {
         const product = data.filter(function(e) {
           return e.category === productCategory;
@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
       //  Create Brands list
       const brandsArr = data.map(product => product.make);
       getUnique(brandsArr).forEach(item => {
-        manufacturer.innerHTML += `<li class="manufacturersContainer__container"><a href="/products/index.html?product_make=${item}" class="manufacturersContainer__manufacturer">${item}</a></li>`;
-        titleManufacturer.innerHTML += `<li class="title__manufacturer"><a href="/products/index.html?product_make=${item}" class="manufacturer__link ${item}">${item}</a></li>`;
+        brandsContainer.innerHTML += `<li class="manufacturersContainer__container"><a href="/products/index.html?product_make=${item}" class="manufacturersContainer__manufacturer">${item}</a></li>`;
+        titleBrands.innerHTML += `<li class="title__manufacturer"><a href="/products/index.html?product_make=${item}" class="manufacturer__link ${item}">${item}</a></li>`;
       });
     });
 });

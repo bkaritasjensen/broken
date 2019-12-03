@@ -54,7 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         countProducts(product);
         createEachProduct(product);
-      } else {
+      } 
+      else if(productBrand) {
+        const product = data.filter(function(e) {
+          return e.make === productBrand;
+        });
+        countProducts(product);
+        createEachProduct(product);
+      } 
+      else {
         countProducts(data);
         createEachProduct(data);
       }

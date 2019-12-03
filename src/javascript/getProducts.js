@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //  Search for category, brands & price in URL
   let params = new URLSearchParams(window.location.search);
   let productCategory = params.get("product_category");
+  let productBrand = params.get("product_make");
 
   //  Category list & container
   const categoryContainer = document.querySelector(".productsBackground__categories");
@@ -81,8 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
       //  Create Manufacturer list
       const manufacturerArr = data.map(product => product.make);
       getUnique(manufacturerArr).forEach(item => {
-        manufacturer.innerHTML += `<li class="manufacturersContainer__container"><a href="" class="manufacturersContainer__manufacturer">${item}</a></li>`;
-        titleManufacturer.innerHTML += `<li class="title__manufacturer"><a href="" class="manufacturer__link ${item}">${item}</a></li>`;
+        manufacturer.innerHTML += `<li class="manufacturersContainer__container"><a href="/products/index.html?product_make=${item}" class="manufacturersContainer__manufacturer">${item}</a></li>`;
+        titleManufacturer.innerHTML += `<li class="title__manufacturer"><a href="/products/index.html?product_make=${item}" class="manufacturer__link ${item}">${item}</a></li>`;
       });
     });
 });

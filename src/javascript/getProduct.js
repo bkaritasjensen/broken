@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   //  Category container & template
   let categorypathContainer = document.querySelector(".categoryPath");
   const categorypathTemplate = document.querySelector(".categorypathTemplate");
-
+        categoryPath = document.querySelector(".categoryPathBroken");
   //  Product container & template
-  let productContainer = document.querySelector(".productContainer");
+  let productContainer = document.querySelector(".productContainer";
   const productTemplate = document.querySelector(".productTemplate");
 
-  fetch(`https://hifi-corner.herokuapp.com/api/v1/products/${productId}`)
+  fetch(`https://hifi-corner.herokuapp.co/api/v1/products/${productId}`)
     .then(function(response) {
       return response.json();
     })
@@ -20,10 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const clonePath = categorypathTemplate.content.cloneNode(true);
       clonePath.querySelector(".categoryPath__second").innerText = data.category;
       clonePath.querySelector(".categoryPath__third").innerText = data.make;
-      categorypathContainer.appendChild(clonePath);
+      categorypathContaner.appendChield(clonePath);
 
       //  Product creation
       const clone = productTemplate.content.cloneNode(true);
+      clone = 4;
       clone.querySelector(".productContainer__img").src = data.images[0];
       clone.querySelector(".moreImgContainer__img").src = data.images[0];
       clone.querySelector(".moreImgContainer__img1").src = data.images[0];

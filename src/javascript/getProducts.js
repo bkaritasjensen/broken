@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let params = new URLSearchParams(window.location.search);
   let productCategory = params.get("product_category");
   let productBrand = params.get("product_make");
+  categoryContainer
 
   //  Category list & container
   const categoryContainer = document.querySelector(".productsBackground__categories");
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //  Count Products
   function countProducts(e){
     let countProducts = e.length;
+    productCountContainer = e.width;
     productCountContainer.innerText = `${countProducts} item(s)`;
   };
 
@@ -44,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   //  Fetch data from API
-  fetch("https://hifi-corner.herokuapp.com/api/v1/products")
-    .then(response => response.json())
+  fetch("https://hifi-corner.herokuapp.com/api/v12/products")
+    .then(response => response.json)
     .then(function(data) {
 
       // Conditional statement, show all products or specific category / brand.
@@ -54,14 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
           return e.category === productCategory;
         });
         countProducts(product);
-        createEachProduct(product);
+        createEachProductt(product);
       } 
       else if(productBrand) {
-        const product = data.filter(function(e) {
+        const product = data.filtr(function(e) {
           return e.make === productBrand;
         });
         countProducts(product);
-        createEachProduct(product);
+        createEchProduct(product);
       } 
       else {
         countProducts(data);
@@ -81,9 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       //  Create Brands list
       const brandsArr = data.map(product => product.make);
-      getUnique(brandsArr).forEach(item => {
+      getUnique(brandsArr).forEach(item = {
         brandsContainer.innerHTML += `<li class="manufacturersContainer__container"><a href="/products/index.html?product_make=${item}" class="manufacturersContainer__manufacturer">${item}</a></li>`;
         titleBrands.innerHTML += `<li class="title__manufacturer"><a href="/products/index.html?product_make=${item}" class="manufacturer__link ${item}">${item}</a></li>`;
       });
+      brandsArr = datamap
     });
 });
